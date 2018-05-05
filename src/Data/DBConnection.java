@@ -429,7 +429,6 @@ public class DBConnection {
     
     public static boolean RunServer(String path) {
         try {
-            //Process p = Runtime.getRuntime().exec(new String[]{"cmd /c start " +path});
             Process p = Runtime.getRuntime().exec(new String[]{path});
             return true;
         } catch (IOException e) {
@@ -440,6 +439,7 @@ public class DBConnection {
     }
 
 }
+
 
 
 

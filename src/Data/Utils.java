@@ -53,19 +53,8 @@ public class Utils {
         this.type.add(t);
     }
 
-    public static boolean RunProgram(String path) {
-        try {
-            //Process p = Runtime.getRuntime().exec(new String[]{"cmd /c start " +path});
-            Process p = Runtime.getRuntime().exec(new String[]{path});
-            return true;
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-            return false;
-        }
-
-    }
-
 }
+
 
 
 
