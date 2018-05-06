@@ -10,7 +10,7 @@ import Models.Client;
 
 /**
  *
- * @author Administrator
+ * @author emrood
  */
 public class AddClient extends javax.swing.JFrame {
 
@@ -189,6 +189,10 @@ public class AddClient extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btn_annuleActionPerformed
 
+    // ************************   Sauvegarde d'un nouveau client ****************************
+    /**
+     * 
+     */
     private void btn_saveClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_saveClientActionPerformed
             
             if(!client_name.getText().isEmpty() && 

@@ -272,6 +272,11 @@ public class AddProduct extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Field_priceActionPerformed
 
+    
+      // ************************   AJOUT D'UN NOUVEAU PRODUIT ****************************
+    /**
+     * 
+     */
     private void btn_enregisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_enregisterActionPerformed
         if (DBConnection.Connect()) {
             try {

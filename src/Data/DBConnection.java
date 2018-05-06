@@ -16,10 +16,13 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Administrator
+ * @author emrood
+ * Software engineer
+ * Classe qui gère les différentes requêtes dans la base de donnée.
+ * Port SQL utilise : 3309, DB : propb
+ * 
  */
 public class DBConnection {
-
     public static String USERNAME = "root";
     public static String PASSWORD = "";
     public static String CONNECT = "jdbc:mysql://localhost:3309/propb";
@@ -41,6 +44,7 @@ public class DBConnection {
 
     }
 
+    // Methode initialisant la connection 
     public static boolean Connect() {
 
         try {
@@ -56,7 +60,7 @@ public class DBConnection {
 
     }
 
-    //Retoune la liste des produits et les stocks dans la liste 'mesProduits'
+    //Retoune la liste des produits et les sauvegarde dans la "ArrayList mesProduits "
     public static boolean ListProduits() {
 
         mesProduits = new ArrayList<>();
@@ -86,6 +90,7 @@ public class DBConnection {
 
     }
 
+    // Methode permettand d'ajouter un produit dans la base de donnee - Prend en parametre un objet de type produit
     public static boolean AjouterProduit(Produits produit) {
 
         try {
@@ -100,7 +105,7 @@ public class DBConnection {
 
     }
 
-    //Retoune la liste des produits et les stocks dans la liste 'mesProduits'
+    //Retoune la liste des transactions et les stocks dans la ArrayList 'mesTransactions'
     public static boolean ListTransactions() {
 
         mesTransactions = new ArrayList<>();
@@ -129,6 +134,7 @@ public class DBConnection {
 
     }
 
+    // Methode permettant d'enregistrer une transaction dans la BD
     public static boolean AjouterTransaction(Transactions transaction) {
 
         try {
@@ -150,6 +156,7 @@ public class DBConnection {
 
     }
     
+    // Methode permettant d'apporter des modifications a un produit
     public static boolean updateProduct(Produits p){
     
         
@@ -174,6 +181,7 @@ public class DBConnection {
     
     }
 
+    // Methode permettant de modifier la quantite disponible pour un produit
     public static boolean UpdateProductQuantity(int id, int q) {
 
         try {
@@ -189,6 +197,7 @@ public class DBConnection {
         }
     }
 
+    // Methode permettant de mettre a jour le prix des produits
     public static boolean UpdateProductPrice(int id, float p) {
 
         try {
@@ -203,6 +212,7 @@ public class DBConnection {
         }
     }
 
+    // Methode permettant de supprimer un produit dans la BD
     public static boolean DeleteProduit(int id) {
 
         try {
@@ -219,6 +229,8 @@ public class DBConnection {
 
     }
 
+    // Methode permettant de rechercher un produit avec un mot ou des caracteres contenue 
+    // dans le nom du produit, ou le distributeur ou le type de produit
     public static boolean RechercheProduit(String keyword) {
 
         mesProduits = new ArrayList<>();
@@ -247,6 +259,7 @@ public class DBConnection {
 
     }
 
+    // Methode permettant de faire des recherche dans la base de donnee par un mot cle ou le numero de telephone du client
     public static boolean RechercheTransaction(String keyword) {
 
         mesRequetes = new ArrayList<>();
@@ -275,6 +288,7 @@ public class DBConnection {
 
     }
 
+    // Methode retournant la liste des clients de l'Ent. dans le "ArrayList mesClients"
     public static boolean ListClients() {
 
         mesClients = new ArrayList<>();
@@ -300,6 +314,7 @@ public class DBConnection {
 
     }
 
+    // Methode permettamt d'ajouter un client
     public static boolean AjouterClient(Client client) {
 
         try {
@@ -314,6 +329,7 @@ public class DBConnection {
 
     }
 
+    // Methode permettant de supprimer un client
     public static boolean deleteClient(int id) {
 
         try {
@@ -328,6 +344,7 @@ public class DBConnection {
 
     }
 
+    //Methode permettant de mettre a jour le numero de telephone du client
     public static boolean UpdateClientPhone(int id, String phone) {
 
         try {
@@ -342,6 +359,7 @@ public class DBConnection {
         }
     }
 
+    // Methode permettant de mettre a jour le nom du client
     public static boolean UpdateClientName(int id, String name) {
 
         try {
@@ -356,6 +374,7 @@ public class DBConnection {
         }
     }
 
+    // Methode permettat de mettre a jour l'adresse du client
     public static boolean UpdateClientAdress(int id, String adress) {
 
         try {
@@ -370,6 +389,7 @@ public class DBConnection {
         }
     }
 
+    // Methode retournant la liste des vendeurs de l'entreprise et les sauvegarde dans "mesUtilisateurs"
     public static boolean ListUtilisateurs() {
 
         mesUtilisateurs = new ArrayList<>();
@@ -439,6 +459,8 @@ public class DBConnection {
     }
 
 }
+
+
 
 
 
