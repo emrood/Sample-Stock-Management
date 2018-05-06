@@ -41,10 +41,12 @@ public class MainScreen extends javax.swing.JFrame {
         }else{
             System.out.println("Error lauching server");
         }
+        // retourne la liste des produits
         populateList();
 
     }
 
+    // Methode pourrechercher un produit par un mot cle et les affiche dans le jTable jT_Recherche
     private void RechercherProduit() {
 
         if (!JT_keyword.getText().isEmpty()) {
@@ -82,6 +84,7 @@ public class MainScreen extends javax.swing.JFrame {
 
     }
 
+    // Methode pour rechercher une transaction par un mot cle et les affiche dans le jTable jT_Recherche
     private void RechercherTransaction() {
                if (!JT_keyword.getText().isEmpty()) {
 
@@ -118,6 +121,7 @@ public class MainScreen extends javax.swing.JFrame {
 
     }
 
+    // Methode initialisant la liste des produits
     private void populateList() {
 
         DefaultTableModel models = new DefaultTableModel();
@@ -703,6 +707,8 @@ public class MainScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuItem2MousePressed
 
     //TO DEFINE LISTING OPTION
+    //Effet sur les bouttons du menu
+    
     private void MenuItem2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuItem2MouseReleased
         // TODO add your handling code here:
         JL_ListItem.setBackground(Color.getColor("#2962ff"));
